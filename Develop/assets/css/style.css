@@ -1,0 +1,62 @@
+/*Global declarations*/
+:root {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* global deflault font*/
+    font-family: monospace;
+    /*debugging*/
+    border: 1px solid red;
+}
+
+
+body {
+    background-color: blue;
+
+}
+
+
+p {
+    color: white;
+    font-size: 1.3em;
+}
+
+
+button {
+    outline: none;
+    background-color: black;
+    color: white;
+    font-size: 1.3em;
+}
+
+/*Outer Container*/
+.outer-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    padding: 10px;
+    height: 100vh;
+}
+
+/*Top Bar*/
+.top-bar p {
+    float: right;
+}
+
+/*Inner Container*/
+.inner-container {
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    margin: auto;
+    width: 50%;
+}
+
+/*Header/Quiz Start*/
+header {
+    color: grey;
+}
+
+/*Main Quiz Content*/
+main {
+    color: grey;
+}
