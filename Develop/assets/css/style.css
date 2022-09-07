@@ -7,26 +7,37 @@
     font-family: monospace;
     /*debugging*/
     border: 1px solid red;
+    color: white;
 }
 
 
 body {
     background-color: blue;
+    overflow: hidden;
 
 }
 
 
 p {
-    color: white;
     font-size: 1.3em;
 }
 
 
 button {
     outline: none;
-    background-color: black;
-    color: white;
+    background-color: purple;
     font-size: 1.3em;
+    color: white;
+}
+
+h1, h2 {
+    color: rgb(225, 225, 168);
+    text-align: center;
+}
+
+
+li {
+    list-style: none;
 }
 
 /*Outer Container*/
@@ -38,6 +49,7 @@ button {
     height: 100vh;
 }
 
+
 /*Top Bar*/
 .top-bar p {
     float: right;
@@ -47,16 +59,43 @@ button {
 .inner-container {
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
-    margin: auto;
+    margin: 0 auto;
     width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-/*Header/Quiz Start*/
-header {
-    color: grey;
+/*Header & Main/Quiz Start*/
+.quiz-start, main {
+    margin-top: 30vh;
+    margin-left: 10%;
+    margin-right: 10%;
+    background-color: grey;
+    /*debugging*/
+    display: none;
 }
+
+
+.quiz-start p {
+   text-align: center;
+}
+
+
+.quiz-start button {
+   display: block;
+   margin: 0 auto;
+   background-color: purple;
+ }
 
 /*Main Quiz Content*/
 main {
-    color: grey;
+    /*debugging - return to 'none' when done styling*/
+    display: block;
 }
+
+/*Test Prompts Questions*/
+
+
+/*Quiz Done*/
+
