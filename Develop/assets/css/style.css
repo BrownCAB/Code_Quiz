@@ -8,6 +8,8 @@
     /*debugging*/
     border: 1px solid red;
     color: white;
+    --primary: white;
+    --secondary: purple;
 }
 
 
@@ -67,7 +69,7 @@ li {
 }
 
 /*Header & Main/Quiz Start*/
-.quiz-start, main {
+.quiz-start-screen, main {
     margin-top: 30vh;
     margin-left: 10%;
     margin-right: 10%;
@@ -77,12 +79,12 @@ li {
 }
 
 
-.quiz-start p {
+.quiz-start-screen p {
    text-align: center;
 }
 
 
-.quiz-start button {
+.quiz-start-screen button {
    display: block;
    margin: 0 auto;
    background-color: purple;
@@ -90,12 +92,22 @@ li {
 
 /*Main Quiz Content*/
 main {
-    /*debugging - return to 'none' when done styling*/
+    /*debugging - set to 'none' by default*/
     display: block;
 }
 
-/*Test Prompts Questions*/
+/*Test Prompt Questions*/
+.test-prompts {
+    display: none;
+}
 
+/*Quiz Finished Screen*/
+.quiz-finish-screen {
+    display: none;
+}
 
-/*Quiz Done*/
+/*Highscores Screen*/
+.highscores-screen {
+    display: block;
+}
 

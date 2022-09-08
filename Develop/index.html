@@ -7,55 +7,74 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>Code Quiz</title>
 </head>
-<body>
-    <!--Outer Div-->
-    <div class="outer-container">
 
-        <!--Top-bar-->
-        <div class="top-bar">
+<body>
+      <!--Outer Div-->
+      <div class="outer-container">
+
+      <!--Top-bar-->
+      <div class="top-bar">
             <button>View Highscores</button>
             <p>Timer: 00:00</p>
-        </div>
+      </div>
         <!--Inner Div-->
         <div class="inner-container">
 
             <!--Phrase 1-->
 
             <!--Header/ Quiz Start-->
-            <header class="quiz-start">
+            <header class="quiz-start-screen">
                 <h1>Code Quiz Challenge</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti non minima perferendis nam dolor esse error omnis laboriosam alias dolores?</p>
-                <button>Start Quiz</button>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti non minima perferendis nam dolor esse error omnis laboriosam alias dolores?</p>
+                        <button>Start Quiz</button>
             </header>
-
             <!--Main Content-->
             <main>
-
             <!--Phrase 2-->
+            <!--This will be generated in javasctipt-->
                 <section class="test-prompts">
                     <h2>Questions Here</h2>
-                    <ul>
+                    <ol>
                         <li><button>Answers 1</li></button>
                         <li><button>Answers 2</li></button>
                         <li><button>Answers 3</li></button>
                         <li><button>Answers 4</li></button>
-                    </ul>
+                    </ol>
+                    <hr>
+                    <footer>
+                    <p>Correct!>
+                    </footer>
                 </section>
-
             <!--Phrase 3-->
-            <section class="quiz-done">
+            <section class="quiz-finish-screen">
                 <h2>All done!</h2>
-                    <p>Your final score</p>
-                    <form>
-                        <label for="intials">Enter Your Intials</label> <input type="text" id="intials" name="fname" value="">
-                        <input type="submit" value="Submit">
-                    </form>
+                    <p>Your final score: 00</p>
+                        <div>
+                            <label for="intials">Enter Your Intials</label> 
+                            <input type="text" 
+                            <button>Submit</button>
+                        </div>
+            </section>
+            
+            <!--Phrase 4-->
+            
+            <section class="highscores-screen">
+                  <h2>Highscores</h2>
+                        <ol>
+                        <!--This will be generated in javasctipt-->  
+                           <li>CB - 20</li>
+                           <li>CB - 20</li>
+                           <li>CB - 20</li>
+                           <li>CB - 20</li>
+                        </ol>
+                           <button>Go Back</button>
+                           <button>Clear Highscores</button>
             </section>
 
             </main>
         </div>
     </div>
    
-<script scr="./assets/js/script.js"></script>    
-</body>
+            <script scr="./assets/js/script.js"></script>    
+      </body>
 </html>
