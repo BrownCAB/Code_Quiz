@@ -1,15 +1,15 @@
 //HTML element varibales 
-let scores = document.querySelector("#scores");
-let timer = document.querySelector("#timer");
-let container = document.querySelector("#container");
-let title = document.querySelector("#title");
-let content = document.querySelector("#content");
-let start = document.querySelector("#start");
-let answer = document.querySelector("#answer");
+var scores = document.querySelector("#scores");
+var timer = document.querySelector("#timer");
+var container = document.querySelector("#container");
+var title = document.querySelector("#title");
+var content = document.querySelector("#content");
+var start = document.querySelector("#start");
+var answer = document.querySelector("#answer");
 
-// Questions
-class question {
-    constructor(question, options, answers) {
+// Question Structure
+class Question {
+    constructor(question, options, answer) {
     this.question = question;
     this.options = options;
     this.answer = answer;
@@ -18,29 +18,29 @@ class question {
 
 let questionList = [];
 
-//All the questions formated into questionList array
+//All theQquestions formated into questionList array
 const options1 = ["1. script", "2. link", "3. a", "4. href"];
-const question1 = new question("Javasccript is added to an HTML document using this tag?", options1, "1. <script>");
+const question1 = new Question("Javasccript is added to an HTML document using this tag?", options1, "1. <script>");
 questionList.push(question1);
 
 const options2 = ["1. HTML", "2. Attribute Values", "3. CSS", "4. all of the above"];
-const question2 = new question("Javascript can change what?", options2, "4. all of the above");
+const question2 = new Question("Javascript can change what?", options2, "4. all of the above");
 questionList.push(question2);
 
 const options3 = ["1. data", "2. var", "3. value", "4. names"];
-const question3 = new question("What is one of ways you can desclare a javascript variable?", options3, "2. var");
+const question3 = new Question("What is one of ways you can desclare a javascript variable?", options3, "2. var");
 questionList.push(question3);
 
 const options4 = ["1. doesn't use quotes", "2. stores text", "3. value", "4. doesn't manipulates"];
-const question4 = new question("Which is true about Primitive types?", options4, "3. value");
+const question4 = new Question("Which is true about Primitive types?", options4, "3. value");
 questionList.push(question4);
 
 const options5 = ["1. varibales", "2. true or false", "3. operators", "4. none of the above"];
-const question5 = new question("Comparison and Logical operators are used to test for what?", options5, "2. true or false");
+const question5 = new Question("Comparison and Logical operators are used to test for what?", options5, "2. true or false");
 questionList.push(question5);
 
 const options6 = ["1. if...else", "2. true", "3. false", "4. arrays"];
-const question6 = new question("What conditional statement do we use to perform differet decisions?", options6, "1. if...else");
+const question6 = new Question("What conditional statement do we use to perform differet decisions?", options6, "1. if...else");
 questionList.push(question6);
 
 // Variable for question loop function
@@ -90,7 +90,7 @@ function runTimer () {
     }, 1000)
 }
 
-// Either goes to next question or end of quiz
+// Either goes to next question or ends the quiz
 function nextQuestion(event) {
     writeAnswer(event);
     if(currentQues < questionList.length) {
@@ -125,6 +125,22 @@ function writeAnswer(event) {
         clearAnswer();
     }
 }
+
+//clear answers and footer and check time
+function clearAnswer() {
+    if(isClearingAnswer) {
+        isClearingAnswer = false;
+        clearTimeout(clearingAnswerCode);
+        clearAnswer();
+    } else {
+        isClearingAnswer = true;
+        clearingAnswerCode = setTimeout(function() {
+            answer.textContent = "";
+            isClearingAnswer = false;
+        }, 3000);
+    }
+}
+
 
 // Change to the next set of questions
 function changeQuestion() {
@@ -202,7 +218,7 @@ function addScore(event) {
     saveScore(id);
 }
 
-// save Score to local storage
+// Save Score to local storage
 function saveScore(id) {
     if(localStorage.getItem("leaderboard") !== null) {
         leaderboard = JSON.parse(localStorage.getItem("leaderboard"));
@@ -260,27 +276,27 @@ function writeScores() {
 
 // Goback button generated and click listener
 function createEndButtons() {
-    if(!document.getElementById("goBack")) {
-        let goBackVar = document.createElement("button");
-        container.appendChild(goBackVar);
-        goBackVar.textContent = "Go Back";
-        goBackVar.setAttribute("id", "goBack");
+    if(!document.getElementById("restart")) {
+        let restartVar = document.createElement("button");
+        container.appendChild(restartVar);
+        restartVar.textContent = "Go Back";
+        restartVar.setAttribute("id", "restart");
         
         let clearScoresVar = document.createElement("button");
         container.appendChild(clearScoresVar);
         clearScoresVar.textContent = "Clear High Scores";
         clearScoresVar.setAttribute("id", "clearScores");
         
-        goBackVar.addEventListener("click", goBack);
+        restartVar.addEventListener("click", restart);
         clearScoresVar.addEventListener("click", clearScores)
     }
 }
 
 // goback to start content 
-function goBack() {
+function restart() {
     title.setAttribute("style", "align-self: center");
     content.setAttribute("style", "align-self: center; font-size: 110%");
-    document.getElementById("goBack").remove();
+    document.getElementById("restart").remove();
     document.getElementById("clearScores").remove();
     title.textContent = "Coding Quiz Challenge";
     content.textContent = "Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will penalize your time by reducing it by ten seconds.";

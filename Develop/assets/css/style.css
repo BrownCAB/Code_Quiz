@@ -10,9 +10,7 @@
 }
 
 a {
-    cursor: pointer;
     color: var(--secondary);
-    text-decoration: none; 
 }
 
 header {
@@ -34,15 +32,18 @@ header {
     border: 1px solid black;  
 }
 
+
 #title {
     font-size: 3.4vw;
     text-align: center;
 }
 
+
 #content {
     font-size: 3vw;
     text-align: center;
 }
+
 
 button {
     font-size: 3vw;
@@ -52,11 +53,10 @@ button {
     margin: 2% auto;
     background-color: var(--secondary);
     color: var(--primary);
-    cursor: pointer;
 }
 
 /*JS buttons */
-#button1, #button2, #button3, #button4, #goBack, #clearScores {
+#button1, #button2, #button3, #button4, #restart, #clearScores {
     align-self: start;
 
 }
