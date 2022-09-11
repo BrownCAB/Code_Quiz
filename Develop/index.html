@@ -9,71 +9,17 @@
 </head>
 
 <body>
-      <!--Outer Div-->
-      <div class="outer-container">
-
-      <!--Top-bar-->
-      <div class="top-bar">
-            <button>View Highscores</button>
-            <p>Timer: 00:00</p>
-      </div>
-        <!--Inner Div-->
-        <div class="inner-container">
-
-            <!--Phrase 1-->
-
-            <!--Header/ Quiz Start-->
-            <header class="quiz-start-screen">
-                <h1>Code Quiz Challenge</h1>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti non minima perferendis nam dolor esse error omnis laboriosam alias dolores?</p>
-                        <button>Start Quiz</button>
-            </header>
-            <!--Main Content-->
-            <main>
-            <!--Phrase 2-->
-            <!--This will be generated in javasctipt-->
-                <section class="test-prompts">
-                    <h2>Questions Here</h2>
-                    <ol>
-                        <li><button>Answers 1</li></button>
-                        <li><button>Answers 2</li></button>
-                        <li><button>Answers 3</li></button>
-                        <li><button>Answers 4</li></button>
-                    </ol>
-                    <hr>
-                    <footer>
-                    <p>Correct!>
-                    </footer>
-                </section>
-            <!--Phrase 3-->
-            <section class="quiz-finish-screen">
-                <h2>All done!</h2>
-                    <p>Your final score: 00</p>
-                        <div>
-                            <label for="intials">Enter Your Intials</label> 
-                            <input type="text" 
-                            <button>Submit</button>
-                        </div>
-            </section>
-            
-            <!--Phrase 4-->
-            
-            <section class="highscores-screen">
-                  <h2>Highscores</h2>
-                        <ol>
-                        <!--This will be generated in javasctipt-->  
-                           <li>CB - 20</li>
-                           <li>CB - 20</li>
-                           <li>CB - 20</li>
-                           <li>CB - 20</li>
-                        </ol>
-                           <button>Go Back</button>
-                           <button>Clear Highscores</button>
-            </section>
-
-            </main>
-        </div>
-    </div>
+    <header>
+            <a id="scores" class="scores">View High Scores</a>
+            <section id="timer" class="timer">Time: 00</section>
+    </header>
+        <!--Phrase 1-->
+        <main id="container" id="container">
+            <h1 id="title" class="title">Coding Quiz Challenge</h1> 
+            <section class="content" id="content">Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will penalize your time by reducing it by ten seconds.</section>
+            <button class="start" id="start">Start Quiz</button>
+        </main>
+        <footer class="answer" id="answer"></footer>    
    
             <script scr="./assets/js/script.js"></script>    
       </body>
