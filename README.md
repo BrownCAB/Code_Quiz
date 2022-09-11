@@ -1,4 +1,4 @@
-# <Code_Quiz>
+# Code_Quiz
 
 ## Description
 Based on the User Story I want to take a timed quiz on JavaScript fundamentals that stores high scores so that I can guage my knowledge against my peers

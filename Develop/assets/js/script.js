@@ -18,7 +18,7 @@ class Question {
 
 let questionList = [];
 
-//All theQquestions formated into questionList array
+//All the questions formated into questionList array
 const options1 = ["1. script", "2. link", "3. a", "4. href"];
 const question1 = new Question("Javasccript is added to an HTML document using this tag?", options1, "1. <script>");
 questionList.push(question1);
