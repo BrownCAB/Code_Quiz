@@ -1,5 +1,4 @@
 let timer = document.querySelector("#timer");
-let highScores = document.querySelector("#highScores");
 
 //userName is userInitials
 let userInitials = document.querySelector("#userInitials");
