@@ -1,47 +1,41 @@
 :root {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    --primary: white;
-    --secondary: blueviolet;
-    --teriary: violet;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  --primary: white;
+  --secondary: blueviolet;
+  --teriary: violet;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
-
 
 header {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: baseline;
-    font-size: 1.5vw;
-    border: 1px solid black;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: baseline;
+  font-size: 1.5vw;
 }
 
-
 #intro {
-    text-align: center;
-    margin: 1% 0%;
-    padding: 3%;
-    display: flex;
-    flex-direction: column;
-    border: 1px solid black;  
+  text-align: center;
+  margin: 1% 0%;
+  padding: 3%;
+  display: flex;
+  flex-direction: column;
 }
 
 #greetingInput {
-    text-align: center;
-    border: 1px solid black; 
+  text-align: center;
 }
 
 #quiz {
-    text-align: center;
-    font-size: 1.5vw;
-    border: 1px solid black; 
+  text-align: center;
+  font-size: 1.5vw;
 }
 
 #submitStatus {
-    text-align: center;
-    margin-top: 1%;
-    font-size: 1.5vw;
+  text-align: center;
+  margin-top: 1%;
+  font-size: 1.5vw;
 }
