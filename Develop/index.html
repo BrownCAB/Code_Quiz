@@ -5,22 +5,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/style.css">
-    <title>Code Quiz</title>
+    <title>Code_Quiz</title>
 </head>
 
 <body>
     <header>
-            <a id="scores">View High Scores</a>
-            <section id="timer">Time: 0</section>
+        <a id="highScores">View High Scores</a>
+        <h3>Coding Quiz Challenge</h3>
+        <section id="timer"></section>
     </header>
-        <!--Phrase 1-->
-        <main id="container">
-            <h1 id="title">Coding Quiz Challenge</h1> 
-            <section id="content">Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will penalize your time by reducing it by ten seconds.</section>
-            <button id="start">Start Quiz</button>
-        </main>
-        <footer id="answer"></footer>    
-   
-            <script scr="./assets/js/script.js"></script>    
-      </body>
+
+    <main id="intro">
+        <h2 id="introText">Please enter your initials.</h2>
+        <h4 id="scoreText"></h4><br>
+    </main>
+
+    <section id="greetingInput">
+        <input id="userInitials"><br><br>
+        <button onclick="greeting()">Submit</button>
+    </section>
+
+    <section id="quiz">
+        <h3 id ="question"></h3>
+        <div id="answerA" onclick="aFunction()">1. </div>
+        <div id="answerB" onclick="bFunction()">2.</div>
+        <div id="answerC" onclick="cFunction()">3.</div>
+        <div id="answerD" onclick="dFunction()">4.</div><br>
+        <!--Submit Buttons-->
+        <div id="qn1Button" onclick="submitQn1()"><button>submit</button></div>
+        <div id="qn2Button" onclick="submitQn2()"><button>submit</button></div>
+        <div id="qn3Button" onclick="submitQn3()"><button>submit</button></div>
+        <div id="qn4Button" onclick="submitQn4()"><button>submit</button></div>
+    </section>
+
+    <footer id="submitStatus"></footer>
+
+
+<script src="./assets/js/script.js"></script>
+</body>
 </html>
