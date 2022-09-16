@@ -21,7 +21,7 @@ Provide instructions and examples for use. Include screenshots as needed.
 
     
     Screenshoot
-    ![screenshot](Develop/screenshot)
+    ![screenshot](assets/screenshot)
 
     Deployed project link
     https://browncab.github.io/Code_Quiz/
