@@ -21,6 +21,8 @@ let answerC = document.querySelector("#answerC");
 let answerD = document.querySelector("#answerD");
 let iterationNumber = 0;
 let qnChoice = "";
+/*'user' is now a global variable*/
+let user;
 let score = 0;
 let time = 60;
 let quizTimer;
@@ -86,9 +88,9 @@ function reset() {
 function greeting() {
   introText.innerHTML = "";
   introText.innerHTML = "Let's Go " + userInitials.value + "!";
-//Save userInitials to localStorage
-  const user = userInitials.value 
- localStorage.setItem("user", user);
+//'user' is declared as a global variable, not a local variable anymore
+  user = userInitials.value; 
+
   greetingInput.style.display = "none";
   quiz.style.display = "block";
   qn1Button.style.display = "block";
@@ -201,12 +203,37 @@ function submitQn4() {
   }
   // score screen
   iterationNumber += 1;
-  scoreText.innerHTML = "Your score is " + score;
-  //Save score to localStorage 
-  localStorage.setItem("score", score);
+  scoreText.innerHTML = "Your score is " + score; 
+ 
   quiz.style.display = "none";
   clearInterval(quizTimer);
+  //Save score
+  saveScore();
   //Run Reset function
   reset();
   submitStatus.style.display = "block";
+}
+
+function saveScore() {
+  // Retrieve scores saved
+  let savedScores = JSON.parse(localStorage.getItem('highscores'));
+  // if statement
+  if (!savedScores) {
+    savedScores =[];
+  }
+  
+  // userScore object to hold the user Intitials and score
+  const userScore = {
+    initials: user,
+    score: score,
+  };
+
+  // Update saved array and save it to local storage
+  savedScores.push(userScore);
+  localStorage.setItem('highscores', JSON.stringify(savedScores));
+  // Redirect to highscore page
+  setTimeout(function(){
+    console.log('setTimeout');
+    window.location.href = "highscores.html";
+}, 1000)
 }
