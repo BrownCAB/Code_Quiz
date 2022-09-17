@@ -21,7 +21,7 @@ Provide instructions and examples for use. Include screenshots as needed.
 
     
     Screenshoot
-    ![screenshot](assets/screenshot.png)
+    ![screenshot](Develop/screenshot.png)
 
     Deployed project link
     https://browncab.github.io/Code_Quiz/
@@ -29,7 +29,7 @@ Provide instructions and examples for use. Include screenshots as needed.
     
 
 ## Credits
-W3schools, 2u Tutor
+W3schools, 2u Tutor, Teacher
 
 ## License
 Please refer to the LICENSE in the repo.
